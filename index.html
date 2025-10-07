@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Noura Aghzaf – CV</title>
+  <meta name="description" content="CV website for Noura Aghzaf – Customer Service Representative and Translator" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --panel: #111318;
+      --ink: #e9eef6;
+      --muted: #a9b3c3;
+      --brand: #7dd3fc;
+      --brand-2: #a78bfa;
+      --chip: #1a2030;
+      --shadow: 0 8px 30px rgba(0,0,0,.35);
+      --radius-xl: 18px;
+      --radius: 12px;
+      --maxw: 980px;
+    }
+
+    * { box-sizing: border-box }
+    html, body { height: 100% }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+      color: var(--ink);
+      background: radial-gradient(1200px 800px at 10% -10%, #111827 10%, transparent 40%),
+                  radial-gradient(1200px 800px at 110% 10%, #1f2937 10%, transparent 40%),
+                  var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .wrap { max-width: var(--maxw); margin: 40px auto; padding: 0 20px; }
+
+    header.hero {
+      position: relative;
+      padding: 28px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, rgba(125,211,252,.12), rgba(167,139,250,.10)) , var(--panel);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .glow {
+      position: absolute; inset: -20% -10% auto auto; width: 380px; height: 380px; border-radius: 9999px;
+      background: radial-gradient(closest-side, rgba(125,211,252,.35), transparent 70%);
+      filter: blur(24px); pointer-events: none;
+    }
+
+    .hero-top { display: grid; grid-template-columns: 90px 1fr auto; gap: 20px; align-items: center; }
+
+    .avatar {
+      width: 90px; height: 90px; border-radius: 18px; background: linear-gradient(180deg, #93c5fd, #a78bfa);
+      display: grid; place-items: center; font-family: "Playfair Display", serif; font-weight: 700; font-size: 34px; color: #0b0c10;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    h1 { margin: 0; font-family: "Playfair Display", serif; font-weight: 700; font-size: clamp(28px, 4vw, 44px); letter-spacing: .2px; }
+    .role { margin-top: 4px; color: var(--muted); font-weight: 600; letter-spacing: .5px }
+
+    .actions { display: flex; gap: 10px; }
+    .btn {
+      appearance: none; border: 0; padding: 10px 14px; border-radius: 999px; cursor: pointer; font-weight: 600;
+      background: #e2e8f0; color: #0b1220; box-shadow: 0 6px 16px rgba(0,0,0,.25);
+    }
+    .btn.ghost { background: #1f2937; color: #e5e7eb; border: 1px solid #2b3444; }
+
+    .hero-bottom { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .chip { background: var(--chip); color: #cbd5e1; border: 1px solid #263046; padding: 8px 12px; border-radius: 999px; font-size: 14px; }
+    .chip a { color: inherit; text-decoration: none }
+
+    main { margin-top: 26px; display: grid; grid-template-columns: 1.2fr .9fr; gap: 26px; }
+    @media (max-width: 900px) { main { grid-template-columns: 1fr } }
+
+    section.card {
+      background: var(--panel); border-radius: var(--radius-xl); padding: 22px 22px; box-shadow: var(--shadow);
+      border: 1px solid #20283a;
+    }
+
+    .card h2 { margin: 0 0 14px; font-size: 18px; letter-spacing: .6px; text-transform: uppercase; color: #c7d2fe; }
+    .subtle { color: var(--muted) }
+
+    .split { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: baseline; }
+
+    .timeline { display: grid; gap: 18px; }
+    .item { display: grid; gap: 4px; }
+    .item .headline { font-weight: 700 }
+    .item .meta { font-size: 14px; color: var(--muted) }
+    .item ul { margin: 8px 0 0 18px; padding: 0; }
+    .item li { margin: 6px 0 }
+
+    .gridlist { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+    @media (max-width: 600px) { .gridlist { grid-template-columns: 1fr } }
+
+    .skill { padding: 10px 12px; border-radius: 12px; background: #0f1422; border: 1px solid #1f2740; }
+
+    footer { text-align: center; color: var(--muted); margin: 26px 0 60px }
+
+    /* Print view */
+    @media print {
+      body { background: #fff; color: #000 }
+      .wrap { margin: 0; padding: 0 }
+      header.hero, section.card { box-shadow: none; border: 1px solid #ccc; background: #fff }
+      .btn, .actions, .glow { display: none !important }
+      a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 10px; color: #555 }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="hero-top">
+        <div class="avatar" aria-hidden="true">NA</div>
+        <div>
+          <h1>Noura Aghzaf</h1>
+          <div class="role">Customer Service Representative</div>
+        </div>
+        <div class="actions">
+          <button class="btn" onclick="window.print()">Print / Save PDF</button>
+          <button class="btn ghost" id="toggleTheme" aria-pressed="true">Toggle theme</button>
+        </div>
+      </div>
+      <div class="hero-bottom" aria-label="Contact and quick facts">
+        <div class="chip">📍 Muğla, Turkey</div>
+        <div class="chip"><a href="tel:+905013248710">📞 +90 501 324 87 10</a></div>
+        <div class="chip"><a href="mailto:agz.noura@gmail.com">✉️ agz.noura@gmail.com</a></div>
+        <div class="chip">🎓 B.A. Economics (2021–2025)</div>
+        <div class="chip">☁️ AWS CCP (2025)</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Summary</h2>
+        <p class="subtle">Moroccan customer service representative with expertise in customer support, front desk, and translation. Empathic listener and persuasive communicator with 3+ years across front desk operations, patient support, and translation. Strong at resolving issues, managing inquiries, and delivering clear, courteous support. Adaptable, time‑efficient, and highly motivated to grow professionally.</p>
+      </section>
+
+      <section class="card">
+        <h2>Technical Skills</h2>
+        <div class="gridlist">
+          <div class="skill">Customer Service</div>
+          <div class="skill">Opera PMS</div>
+          <div class="skill">Microsoft Office</div>
+          <div class="skill">Translation & Interpretation</div>
+          <div class="skill">Organization & Time Management</div>
+          <div class="skill">Communication & Collaboration</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="split">
+          <h2>Work Experience</h2>
+        </div>
+        <div class="timeline">
+          <div class="item">
+            <div class="headline">Front Desk Receptionist — Rixos Premium Bodrum</div>
+            <div class="meta">05/2025 – 08/2025 • Bodrum</div>
+            <ul>
+              <li>Welcomed guests; managed check‑in / check‑out and provided guidance on hotel services & local attractions.</li>
+              <li>Handled reservations, room assignments, guest inquiries, and payments in <strong>Opera PMS</strong>.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="headline">Guest Services Cashier — Rixos Premium Bodrum</div>
+            <div class="meta">05/2024 – 10/2024 • Bodrum</div>
+            <ul>
+              <li>Processed 300+ guest payments daily for resort services with accurate cash reconciliation.</li>
+              <li>Maintained clean, organized workstation meeting hotel standards and compliance.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="headline">Patient Services Representative — Medico Clinic</div>
+            <div class="meta">03/2019 – 08/2021 • Sultangazi, İstanbul</div>
+            <ul>
+              <li>Answered inbound calls; scheduled appointments and handled service inquiries.</li>
+              <li>Provided clear information on procedures and clinic services to improve patient experience.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Education</h2>
+        <div class="item">
+          <div class="headline">Bachelor's Degree in Economics</div>
+          <div class="meta">Muğla Sıtkı Koçman University • 2021 – 2025</div>
+        </div>
+        <div class="item" style="margin-top:10px">
+          <div class="headline">AWS Certified Cloud Practitioner (CCP)</div>
+          <div class="meta">2025</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Languages</h2>
+        <div class="gridlist">
+          <div class="skill">Arabic — Native</div>
+          <div class="skill">English — Fluent</div>
+          <div class="skill">Turkish — Fluent</div>
+          <div class="skill">French — Conversational</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Links & Extras</h2>
+        <p class="subtle">Add your LinkedIn, GitHub, portfolio, or certificates here when ready. You can also list 2–3 example projects or achievements as bullets.</p>
+        <ul>
+          <li><strong>LinkedIn:</strong> <a href="#" rel="noopener">Add link</a></li>
+          <li><strong>GitHub:</strong> <a href="#" rel="noopener">Add link</a></li>
+          <li><strong>Certificate URL:</strong> <a href="#" rel="noopener">Add link</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Noura Aghzaf · Built with semantic HTML & a sprinkle of neon.
+    </footer>
+  </div>
+
+  <script>
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    const toggle = document.getElementById('toggleTheme');
+    let dark = true;
+    toggle?.addEventListener('click', () => {
+      dark = !dark;
+      document.documentElement.style.setProperty('--bg', dark ? '#0b0c10' : '#f4f6fb');
+      document.documentElement.style.setProperty('--panel', dark ? '#111318' : '#ffffff');
+      document.documentElement.style.setProperty('--ink', dark ? '#e9eef6' : '#0b1220');
+      document.documentElement.style.setProperty('--muted', dark ? '#a9b3c3' : '#4b5563');
+      document.documentElement.style.setProperty('--chip', dark ? '#1a2030' : '#eef2ff');
+      toggle.setAttribute('aria-pressed', String(dark));
+    });
+  </script>
+</body>
+</html>
