@@ -109,7 +109,29 @@
       .btn, .actions, .glow { display: none !important }
       a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 10px; color: #555 }
     }
-  </style>
+      /* Enhanced buttons & chips */
+    .btn { transition: transform .06s ease, box-shadow .2s ease; }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(0,0,0,.35) }
+    .btn.brand { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color:#0b0c10 }
+    .btn.link { background: #0f172a; color:#e5e7eb; border:1px solid #243045 }
+
+    /* Link cards */
+    .links-grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:14px }
+    @media (max-width:700px){ .links-grid{ grid-template-columns:1fr } }
+    .linkcard { display:flex; align-items:center; gap:12px; padding:14px 16px; border-radius:14px; background:#0f1422; border:1px solid #1f2740 }
+    .linkcard svg{ width:22px; height:22px; flex:0 0 22px }
+    .linkcard a{ color:#cbd5e1; text-decoration:none; font-weight:600 }
+    .linkcard small{ color:var(--muted) }
+
+    /* Subtle section animation */
+    section.card{ will-change: transform, box-shadow; transition: transform .15s ease, box-shadow .25s ease }
+    section.card:hover{ transform: translateY(-2px); box-shadow: 0 14px 36px rgba(0,0,0,.38) }
+
+</style>
+  <meta property="og:title" content="Noura Aghzaf – CV" />
+  <meta property="og:description" content="Customer Service & Translation · Front Desk · Opera PMS · Multilingual" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#7dd3fc" />
 </head>
 <body>
   <div class="wrap">
@@ -122,16 +144,18 @@
           <div class="role">Customer Service Representative</div>
         </div>
         <div class="actions">
-          <button class="btn" onclick="window.print()">Print / Save PDF</button>
+          <button class="btn brand" onclick="window.print()">Print / Save PDF</button>
+          <a class="btn link" href="https://www.linkedin.com/in/noura-agz/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn link" href="https://www.credly.com/badges/cd4d5900-31d4-4092-8a4f-b45cfe7934a8" target="_blank" rel="noopener">Credly Badge</a>
           <button class="btn ghost" id="toggleTheme" aria-pressed="true">Toggle theme</button>
         </div>
       </div>
       <div class="hero-bottom" aria-label="Contact and quick facts">
-        <div class="chip">📍 Muğla, Turkey</div>
-        <div class="chip"><a href="tel:+905013248710">📞 +90 501 324 87 10</a></div>
+        <div class="chip"> Muğla, Turkey</div>
+        <div class="chip"><a href="tel:+905013248710"> +90 501 324 87 10</a></div>
         <div class="chip"><a href="mailto:agz.noura@gmail.com">✉️ agz.noura@gmail.com</a></div>
-        <div class="chip">🎓 B.A. Economics (2021–2025)</div>
-        <div class="chip">☁️ AWS CCP (2025)</div>
+        <div class="chip"> B.A. Economics (2021–2025)</div>
+        <div class="chip"> AWS CCP (2025)</div>
       </div>
     </header>
 
@@ -209,12 +233,23 @@
 
       <section class="card">
         <h2>Links & Extras</h2>
-        <p class="subtle">Add your LinkedIn, GitHub, portfolio, or certificates here when ready. You can also list 2–3 example projects or achievements as bullets.</p>
-        <ul>
-          <li><strong>LinkedIn:</strong> <a href="#" rel="noopener">Add link</a></li>
-          <li><strong>GitHub:</strong> <a href="#" rel="noopener">Add link</a></li>
-          <li><strong>Certificate URL:</strong> <a href="#" rel="noopener">Add link</a></li>
-        </ul>
+        <div class="links-grid">
+          <div class="linkcard">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 8a5 5 0 0 1 7.07 7.07l-2.83 2.83A5 5 0 0 1 14 10" stroke="#93c5fd" stroke-width="2" stroke-linecap="round"/></svg>
+            <div>
+              <a href="https://www.linkedin.com/in/noura-agz/" target="_blank" rel="noopener">LinkedIn – @noura-agz</a><br/>
+              <small>Experience, certificates, and updates.</small>
+            </div>
+          </div>
+          <div class="linkcard">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#a78bfa" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="#a78bfa" stroke-width="2" stroke-linecap="round"/></svg>
+            <div>
+              <a href="https://www.credly.com/badges/cd4d5900-31d4-4092-8a4f-b45cfe7934a8" target="_blank" rel="noopener">Credly – Cloud Practitioner Badge</a><br/>
+              <small>Verified digital credential.</small>
+            </div>
+          </div>
+        </div>
+        <p class="subtle" style="margin-top:12px">Add more links here (Portfolio, GitHub, Certificates). They’ll auto‑format into clean cards.</p>
       </section>
     </main>
 
